@@ -1,0 +1,20 @@
+{
+  "name": "@grucloud/example-aws-route53-dns-validation-record-txt",
+  "version": "1.23.0",
+  "description": "Add TXT record for a website validation by DNS ",
+  "private": true,
+  "main": "iac.js",
+  "scripts": {
+    "graph-target": "gc graph",
+    "graph-live": "gc list --graph",
+    "e2e": "gc d -f && gc d -a && gc l && gc a -f && gc a && gc d -f && gc d && gc l -o",
+    "deploy:ci": "STAGE=ci gc apply -f"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grucloud/core": "^1.23.0",
+    "@grucloud/provider-aws": "^1.23.0",
+    "mime-types": "^2.1.27"
+  }
+}
