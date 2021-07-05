@@ -1,7 +1,7 @@
 {
     "command": "list",
     "commandOptions": {
-        "dotFile": "output/fd20cab8-43e9-4577-a37e-be9af7c10159.dot",
+        "dotFile": "output/67220a54-7c01-40e5-aa06-7906a5e44760.dot",
         "title": "",
         "provider": [
             "aws"
@@ -16,7 +16,7 @@
     },
     "programOptions": {
         "infra": "iac_aws.js",
-        "json": "output/gc-list-fd20cab8-43e9-4577-a37e-be9af7c10159.json"
+        "json": "output/gc-list-67220a54-7c01-40e5-aa06-7906a5e44760.json"
     },
     "result": {
         "error": false,
@@ -289,8 +289,8 @@
                                     "Policies": [
                                         "AdministratorAccess"
                                     ],
-                                    "InstanceProfiles": [],
-                                    "AttachedPolicies": []
+                                    "AttachedPolicies": [],
+                                    "InstanceProfiles": []
                                 },
                                 "cannotBeDeleted": false,
                                 "isDefault": false,
@@ -361,7 +361,6 @@
                                             "Value": "EKS"
                                         }
                                     ],
-                                    "InstanceProfiles": [],
                                     "AttachedPolicies": [
                                         {
                                             "PolicyName": "AmazonEKSClusterPolicy",
@@ -372,6 +371,7 @@
                                             "PolicyArn": "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
                                         }
                                     ],
+                                    "InstanceProfiles": [],
                                     "Policies": []
                                 },
                                 "cannotBeDeleted": false,
@@ -447,7 +447,6 @@
                                         }
                                     ],
                                     "Policies": [],
-                                    "InstanceProfiles": [],
                                     "AttachedPolicies": [
                                         {
                                             "PolicyName": "AmazonEKSWorkerNodePolicy",
@@ -461,7 +460,8 @@
                                             "PolicyName": "AmazonEKS_CNI_Policy",
                                             "PolicyArn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
                                         }
-                                    ]
+                                    ],
+                                    "InstanceProfiles": []
                                 },
                                 "cannotBeDeleted": false,
                                 "isDefault": false,
@@ -622,8 +622,8 @@
                                     ],
                                     "IsDefault": true,
                                     "Tags": [],
-                                    "DnsHostnames": true,
-                                    "DnsSupport": true
+                                    "DnsSupport": true,
+                                    "DnsHostnames": true
                                 },
                                 "cannotBeDeleted": true,
                                 "isDefault": true,
@@ -914,71 +914,6 @@
                         ]
                     },
                     {
-                        "type": "RouteTable",
-                        "group": "ec2",
-                        "resources": [
-                            {
-                                "uri": "aws::ec2::RouteTable::rtb-461d3238",
-                                "name": "rtb-461d3238",
-                                "displayName": "rtb-461d3238",
-                                "id": "rtb-461d3238",
-                                "providerName": "aws",
-                                "type": "RouteTable",
-                                "group": "ec2",
-                                "live": {
-                                    "Associations": [
-                                        {
-                                            "Main": true,
-                                            "RouteTableAssociationId": "rtbassoc-b5a43bc4",
-                                            "RouteTableId": "rtb-461d3238",
-                                            "AssociationState": {
-                                                "State": "associated"
-                                            }
-                                        }
-                                    ],
-                                    "PropagatingVgws": [],
-                                    "RouteTableId": "rtb-461d3238",
-                                    "Routes": [
-                                        {
-                                            "DestinationCidrBlock": "172.31.0.0/16",
-                                            "GatewayId": "local",
-                                            "Origin": "CreateRouteTable",
-                                            "State": "active"
-                                        },
-                                        {
-                                            "DestinationCidrBlock": "0.0.0.0/0",
-                                            "GatewayId": "igw-7bdccb00",
-                                            "Origin": "CreateRoute",
-                                            "State": "active"
-                                        }
-                                    ],
-                                    "Tags": [],
-                                    "VpcId": "vpc-904ceced",
-                                    "OwnerId": "594073614517"
-                                },
-                                "cannotBeDeleted": true,
-                                "isDefault": true,
-                                "namespace": "",
-                                "dependencies": [
-                                    {
-                                        "type": "Vpc",
-                                        "ids": [
-                                            "vpc-904ceced"
-                                        ]
-                                    },
-                                    {
-                                        "type": "InternetGateway",
-                                        "ids": [
-                                            "igw-7bdccb00"
-                                        ]
-                                    }
-                                ],
-                                "managedByUs": false,
-                                "show": true
-                            }
-                        ]
-                    },
-                    {
                         "type": "SecurityGroup",
                         "group": "ec2",
                         "resources": [
@@ -1038,6 +973,71 @@
                                         "type": "SecurityGroup",
                                         "ids": [
                                             "sg-15c54c1e"
+                                        ]
+                                    }
+                                ],
+                                "managedByUs": false,
+                                "show": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "RouteTable",
+                        "group": "ec2",
+                        "resources": [
+                            {
+                                "uri": "aws::ec2::RouteTable::rtb-461d3238",
+                                "name": "rtb-461d3238",
+                                "displayName": "rtb-461d3238",
+                                "id": "rtb-461d3238",
+                                "providerName": "aws",
+                                "type": "RouteTable",
+                                "group": "ec2",
+                                "live": {
+                                    "Associations": [
+                                        {
+                                            "Main": true,
+                                            "RouteTableAssociationId": "rtbassoc-b5a43bc4",
+                                            "RouteTableId": "rtb-461d3238",
+                                            "AssociationState": {
+                                                "State": "associated"
+                                            }
+                                        }
+                                    ],
+                                    "PropagatingVgws": [],
+                                    "RouteTableId": "rtb-461d3238",
+                                    "Routes": [
+                                        {
+                                            "DestinationCidrBlock": "172.31.0.0/16",
+                                            "GatewayId": "local",
+                                            "Origin": "CreateRouteTable",
+                                            "State": "active"
+                                        },
+                                        {
+                                            "DestinationCidrBlock": "0.0.0.0/0",
+                                            "GatewayId": "igw-7bdccb00",
+                                            "Origin": "CreateRoute",
+                                            "State": "active"
+                                        }
+                                    ],
+                                    "Tags": [],
+                                    "VpcId": "vpc-904ceced",
+                                    "OwnerId": "594073614517"
+                                },
+                                "cannotBeDeleted": true,
+                                "isDefault": true,
+                                "namespace": "",
+                                "dependencies": [
+                                    {
+                                        "type": "Vpc",
+                                        "ids": [
+                                            "vpc-904ceced"
+                                        ]
+                                    },
+                                    {
+                                        "type": "InternetGateway",
+                                        "ids": [
+                                            "igw-7bdccb00"
                                         ]
                                     }
                                 ],
